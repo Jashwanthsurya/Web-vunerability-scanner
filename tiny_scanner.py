@@ -20,7 +20,7 @@ def tiny_scanner():
     # --- Page Title ---
     soup = BeautifulSoup(response.text, "html.parser")
     title = soup.title.string.strip() if soup.title else "No title found"
-    print("📄 Page Title:", title)
+    print(" Page Title:", title)
 
     # --- HTTPS Check ---
     if url.startswith("https://"):
@@ -55,4 +55,5 @@ def tiny_scanner():
 
 if __name__ == "__main__":
     tiny_scanner()
+
 
