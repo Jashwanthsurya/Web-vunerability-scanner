@@ -6,16 +6,16 @@ A simple Python tool that scans websites for basic security checks and page info
 
 ## Features
 
-- ✅ Checks website **status code**
-- 📄 Displays **page title**
-- 🔒 Checks if the site uses **HTTPS**
-- 🛡️ Checks for common **security headers**:
-  - Content-Security-Policy
-  - X-Frame-Options
-  - Strict-Transport-Security
-  - X-Content-Type-Options
-- 📝 Lists all **forms** on the page with method and action info
-- ⚠️ Warns about GET forms (not secure for passwords)
+-  Checks website **status code**
+-  Displays **page title**
+-  Checks if the site uses **HTTPS**
+-  Checks for common **security headers**:
+- Content-Security-Policy
+- X-Frame-Options
+- Strict-Transport-Security
+- X-Content-Type-Options
+-  Lists all **forms** on the page with method and action info
+-  Warns about GET forms (not secure for passwords)
 
 ---
 
