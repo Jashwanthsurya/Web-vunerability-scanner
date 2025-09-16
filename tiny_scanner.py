@@ -6,7 +6,7 @@ def tiny_scanner():
     url = input("Paste the website address you own or a training site URL: ").strip()
 
     if not url.startswith("http"):
-        url = "http://" + url  # add http if missing
+        url = "http://" + url  
 
     print("\n Scanning:", url)
 
@@ -17,18 +17,17 @@ def tiny_scanner():
         print(" Error fetching the site:", e)
         return
 
-    # --- Page Title ---
+
     soup = BeautifulSoup(response.text, "html.parser")
     title = soup.title.string.strip() if soup.title else "No title found"
     print(" Page Title:", title)
 
-    # --- HTTPS Check ---
+
     if url.startswith("https://"):
         print(" Secure Connection (HTTPS)")
     else:
         print(" Not using HTTPS (data may be insecure!)")
 
-    # --- Security Headers ---
     print("\n Security Headers Check:")
     security_headers = ["Content-Security-Policy", "X-Frame-Options", 
                         "Strict-Transport-Security", "X-Content-Type-Options"]
@@ -38,7 +37,6 @@ def tiny_scanner():
         else:
             print(f"   Missing {header}")
 
-    # --- Form Check ---
     forms = soup.find_all("form")
     if forms:
         print(f"\n Found {len(forms)} form(s) on the page.")
@@ -55,5 +53,6 @@ def tiny_scanner():
 
 if __name__ == "__main__":
     tiny_scanner()
+
 
 
